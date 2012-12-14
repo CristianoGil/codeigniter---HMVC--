@@ -13,17 +13,14 @@ class Test extends CI_Controller {
 	}
 
 	public function run(){
-		$start = microtime(true);
-   		echo "<pre>Start: $start<br>";
 
-		$data = $this->test_model->execute();
-		echo json_encode($data);
+		for ($i=0; $i < 1 ; $i++) {
+			$this->test_model->execute();
+		}
+	$this->output->enable_profiler(TRUE);
 
-		$end = microtime(true);
-	    echo "End: $end <br><hr>";
-    	$parseTime = $end-$start;
-    	echo 'Took: '.$parseTime.' seconds';
 	}
+
 
 }
 

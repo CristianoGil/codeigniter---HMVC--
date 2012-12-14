@@ -7,8 +7,8 @@
         }
 
         public function execute(){
-            $sql = 'SELECT * FROM `user` WHERE id = 1;';
-            $query = $this->db->query($sql);
+            //$sql = 'SELECT * FROM `user` WHERE id = 1 LIMIT 1;';
+            $query = $this->db->query('SELECT * FROM `user` WHERE id = 1 LIMIT 1');
             return $query->result();
         }
 
